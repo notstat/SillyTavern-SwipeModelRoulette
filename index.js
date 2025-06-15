@@ -4,7 +4,7 @@ import { eventSource, event_types, saveSettingsDebounced } from "../../../../scr
 const extensionName = "SillyTavern-SwipeModelRoulette";
 const extensionFolderPath = `scripts/extensions/third-party/${extensionName}`;
 const defaultSettings = {
-    enabled: true,
+    enabled: false,
     profileWeights: {}
 };
 
