@@ -30,6 +30,6 @@ This extension will not randomly switch the model with regular messages, it will
 
 2. Add at least one connection profile in SillyTavern to use this extension
 
-3. Set the percentages for each model in the extension settings
+3. Set the percentages for each connection profiles in the extension settings
 
-That's it. Now your swipes will automatically use different models.
+That's it. Now your swipes will automatically use different connection profiles.
