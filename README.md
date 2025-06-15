@@ -1,11 +1,15 @@
+# Swipe Model Roulette
+
 Ever swiped in a roleplay and noticed the swipe was 90% similar to the last one? Me too. This extension helps with that.
 
 ![First swipe example](images/example1.png)
 ![Second swipe example](images/example2.png)
 
+(different swipes, but they're similar due to how LLM's behave)
+
 ## What it does
 
-Automatically switches between different AI models when you swipe, giving you more varied responses. Each swipe uses a random model based on the weights you set.
+Automatically switches between different connection profiles when you swipe, giving you more varied responses. Each swipe uses a random connection profile based on the weights you set.
 
 ![Extension settings](images/extensionsettings.png)
 
