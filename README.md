@@ -1,6 +1,6 @@
 # Swipe Model Roulette
 
-Ever swipe in a roleplay and noticed the swipe was 90% similar to the last one? Me too. This extension helps with that.
+Ever swipe in a roleplay and noticed the swipe was 90% similar to the last one? Or maybe you want more swipe variety? This extension helps with that.
 
 ![First swipe example](images/example1.png)
 ![Second swipe example](images/example2.png)
