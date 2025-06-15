@@ -1,0 +1,9 @@
+{
+    "display_name": "Swipe Model Roulette",
+    "loading_order": 6,
+    "requires": [],
+    "optional": [],
+    "js": "index.js",
+    "author": "notstat",
+    "version": "1.0.0"
+}
