@@ -13,9 +13,9 @@ Automatically (and silently) switches between different connection profiles when
 This extension will not randomly switch the model with regular messages, it will ONLY do that with swipes.
 
 ## Fun ways for using this extension
-1. Hooking up multiple models (openrouter is good for this, you can randomly have the extension choose between opus, gpt 4.5, deepseek or whatever model you want for your swipes). For each of those models you can add their own designated jailbreak in the connection profile too.
+1. Hooking up multiple of your favorite models for swiping (openrouter is good for this, you can randomly have the extension choose between opus, gpt 4.5, deepseek or whatever model you want for your swipes). For each of those models you can add their own designated jailbreak in the connection profile too.
 2. You could maybe have a local + corpo model config, you can use a local uncensored model without any jailbreak as a base and on your swipes you could use gpt 4.5 or claude with a jailbreak.
-3. With each swipe you could randomly choose between one of your different jailbreaks so the writing style changes while you are still using the same model.
+3. When using one model, you could set it up so that each swipe uses a different jailbreak for that model (so the writing style changes for each swipe).
 4. You could even set it up to where each connection profile has different sampler settings, one can change the temperature to 0.9, another for 0.7, etc.
 5. If you want to make it a real roulette experience, head to User settings and turn Model Icons off, and put smooth streaming on. This way you wont know what model got randomly picked for each swipe unless you go into the message prompt settings.
 
