@@ -62,11 +62,14 @@ function addSettingsUI() {
                 <div id="swipe_roulette_profiles_container" style="max-height: 250px; overflow-y: auto; padding-right: 10px;">
                 </div>
                 
-                <div class="swipe-roulette-total" style="margin-top: 10px; padding: 10px; background-color: var(--black50a); border-radius: 5px;">
-                    <strong>Total: <span id="swipe_roulette_total">0</span>%</strong>
-                    <span id="swipe_roulette_warning" style="color: var(--warning); margin-left: 10px; display: none;">
-                        (Should be 100%)
-                    </span>
+                <div class="swipe-roulette-total" style="margin-top: 10px; padding: 10px; background-color: var(--black50a); border-radius: 5px; display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <strong>Total: <span id="swipe_roulette_total">0</span>%</strong>
+                        <span id="swipe_roulette_warning" style="color: var(--warning); margin-left: 10px; display: none;">
+                            (Should be 100%)
+                        </span>
+                    </div>
+                    <button id="swipe_roulette_reset_weights" class="menu_button fa-solid fa-undo" title="Reset all weights to 0"></button>
                 </div>
             </div>
         </div>
@@ -80,6 +83,12 @@ function addSettingsUI() {
         extension_settings[extensionName].enabled = $(this).prop("checked");
         saveSettingsDebounced();
     });
+
+    $("#swipe_roulette_reset_weights").on("click", () => {
+        extension_settings[extensionName].profileWeights = {};
+        saveSettingsDebounced();
+        updateProfileList();
+    });
     
     updateProfileList();
     
@@ -91,6 +100,15 @@ function updateProfileList() {
     const context = getContext();
     const profiles = context.extensionSettings?.connectionManager?.profiles || [];
     const container = $("#swipe_roulette_profiles_container");
+
+    const existingProfileIds = new Set(profiles.map(p => p.id));
+    existingProfileIds.add('none');
+    const weights = extension_settings[extensionName].profileWeights;
+    for (const profileId in weights) {
+        if (!existingProfileIds.has(profileId)) {
+            delete weights[profileId];
+        }
+    }
     
     container.empty();
     
