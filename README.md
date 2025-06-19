@@ -13,7 +13,7 @@ Automatically (and silently) switches between different connection profiles when
 This extension will not randomly switch the model with regular messages, it will ONLY do that with swipes.
 
 ## Why not just use quick replies/stscript?
-Quick replies to my current knowledge has no way of detecting user swipes in SillyTavern. Even if you do get the Quick Replies to somehow detect a swipe and change the profile to a random one using the `/profile` slash command, the generation would abort immediately due to a check SillyTavern does when the API gets changed during a generation. This extension intercepts and bypasses that check allowing the random connection profile to generate, before switching back to the original profile. This would probably be impossible to implement in STScript.
+Quick replies to my current knowledge has no way of detecting user swipes in SillyTavern. Even if you do get the Quick Reply to somehow detect swipes and change to a random profile using the `/profile` slash command, the generation would abort immediately due to a check SillyTavern does when the API gets changed during a generation. This extension intercepts and bypasses that check allowing the random connection profile to generate, before switching back to the original profile. This would be impossible to implement in STScript.
 
 ## Fun ways for using this extension
 1. Hooking up multiple of your favorite models for swiping (openrouter is good for this, you can randomly have the extension choose between opus, gpt 4.5, deepseek or whatever model you want for your swipes). For each of those models you can add their own designated jailbreak in the connection profile too.
